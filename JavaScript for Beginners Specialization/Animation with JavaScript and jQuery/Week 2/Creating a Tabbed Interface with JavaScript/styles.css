@@ -1,0 +1,53 @@
+body, ul, li, p {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	padding: 100px 0;
+	background: #ccc;
+	font-family: Arial;
+	color: #333;
+}
+
+p {
+	line-height: 1.5em;
+	margin-bottom: 1em;
+}
+
+#tabs {
+	width: 400px;
+	margin: auto;
+}
+
+#tabs > ul{
+	list-style-type: none;
+	display: flex;
+}
+
+#tabs > ul > li > a{
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	margin-right: 2px;
+	background-color: #A2A2A2;
+	color: #CECECE;
+	text-decoration: none;
+	padding: 0 15px;
+	border-radius: 3px 3px 0 0;
+}
+
+#tabs > div{
+	padding: 15px;
+	background-color: #EAEAEA;
+	transition: opacity 200ms linear;
+}
+
+#tabs .active{
+	background-color: #eaeaea;
+	color: #333;
+}
+
+#tabs .hidden{display: none;}
+#tabs .visible{display: block;}
+#tabs .visuallyhidden{opacity: 0;}

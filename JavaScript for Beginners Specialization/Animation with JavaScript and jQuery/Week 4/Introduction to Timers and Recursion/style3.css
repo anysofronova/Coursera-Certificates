@@ -1,0 +1,19 @@
+body { padding-top: 100px; }
+
+.one {
+    width:100px;
+    height:100px;
+    background:#910104;
+    border-radius:50%;
+    margin:auto;
+    transition: all 2s;
+}
+
+.two {
+    width:500px;
+    height:500px;
+    background:#1B2F6B;
+    border-radius:50%;
+    margin:auto;
+    transition: all 2s;
+}

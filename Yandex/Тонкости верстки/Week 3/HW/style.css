@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(199, 192, 192);
+    font-family: 'Montserrat', sans-serif;
+    padding: 3%;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+main .container {
+    display: grid;
+    grid-template-areas: 'aside  photos photos photos  rating';
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+}
+
+img {
+    width: 100%;
+    position: relative;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+aside {
+    grid-area: aside;
+    background-color: rgb(146, 143, 143);
+    border-radius: 1px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+aside label {
+    padding: 20px 15px;
+    border-bottom: 1px solid rgb(77, 75, 75);
+    cursor: pointer;
+}
+
+aside label:hover {
+    background-color: rgb(92, 91, 91);
+    color: #fff;
+    font-weight: 600;
+}
+
+.photos {
+    grid-area: photos;
+    display: grid;
+    grid-template-areas: 'a b b' 'h c g' 'd d f' 'e e e';
+    grid-gap: 5px;
+    position: relative;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 270px);
+}
+
+.photos div {
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.photos div:hover .description {
+    display: block;
+}
+
+.photos div:nth-child(1) {
+    grid-area: a;
+    background-image: url('https://natalyland.ru/wp-content/uploads/e/a/a/eaa6841a3714e2867f453656ba815386.jpeg');
+}
+
+.photos div:nth-child(2) {
+    grid-area: b;
+    background-image: url('https://kotclub.ru/wp-content/uploads/2020/05/abissinets.jpg');
+}
+
+.photos div:nth-child(3) {
+    grid-area: c;
+    background-image: url("https://avatars.mds.yandex.net/get-zen_doc/1533996/pub_5e08f18f9515ee00b13bd65d_5e08f4f1ecfb8000b0e95be6/scale_1200");
+}
+
+.photos div:nth-child(4) {
+    grid-area: d;
+    background-image: url('https://koshkiny.ru/assets/content/images/britanskaya-korotkosherstnaya-koshka/05-britanskaya-korotkosherstnaya-koshka-photo-02-min.jpg');
+}
+
+.photos div:nth-child(5) {
+    grid-area: e;
+    background-image: url('https://i.pinimg.com/originals/92/bf/de/92bfde9281771b030246141b29fc8632.jpg');
+}
+
+.photos div:nth-child(6) {
+    grid-area: f;
+    background-image: url('http://ru-pets.ru/img/m16/92/1350802081.jpg');
+}
+
+.photos div:nth-child(7) {
+    grid-area: g;
+    background-image: url('https://cat4you.ru/wp-content/uploads/e/0/c/e0cfd2f7f97f90ee5d17c5c22593b8cc.jpeg');
+}
+
+.photos div:nth-child(8) {
+    grid-area: h;
+    background-image: url('https://dombai-26.ru/wp-content/uploads/272303c33fb1f79050658acf46e75ae3.jpg');
+}
+
+.description {
+    display: none;
+    position: relative;
+    text-align: left;
+    bottom: -200px;
+    max-width: max-content;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    color: #fff;
+}
+
+.rating {
+    grid-area: rating;
+    text-align: right;
+}
+
+.rating h2 {
+    color: rgb(211, 20, 20);
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.list>div {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.rating p {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.progress {
+    display: inline-block;
+    width: 70%;
+    height: 20px;
+    margin-right: 10%;
+    border-radius: 5px;
+    /* background-color: #fff; */
+}
+
+.progress div {
+    margin-right: 10px;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.abyssinian_value {
+    width: 90%;
+    background: rgb(13, 255, 26);
+    background: linear-gradient(90deg, rgba(13, 255, 26, 1) 70%, rgb(255, 255, 255) 100%);
+}
+
+.british_value {
+    width: 80%;
+    background: rgb(243, 255, 13);
+    background: linear-gradient(90deg, rgba(243, 255, 13, 1) 62%, rgb(255, 255, 255) 100%);
+}
+
+.russianBlue_value {
+    width: 100%;
+    background: rgb(13, 255, 26);
+    background: linear-gradient(90deg, rgba(13, 255, 26, 1) 70%, rgb(255, 255, 255) 100%);
+}
+
+.siamese_value {
+    width: 40%;
+    background: rgb(255, 13, 13);
+    background: linear-gradient(90deg, rgba(255, 13, 13, 1) 24%, rgb(255, 255, 255) 100%);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="checkbox"]:checked~.list .abyssinian {
+    order: 2;
+}
+
+input[type="checkbox"]:checked~.list .british {
+    order: 3;
+}
+
+input[type="checkbox"]:checked~.list .russianBlue {
+    order: 1;
+}
+
+input[type="checkbox"]:checked~.list .siamese {
+    order: 4;
+}
+
+#abyssinian:checked~.photos div:not(.abyssinian),
+#british:checked~.photos div:not(.british),
+#russianBlue:checked~.photos div:not(.russianBlue),
+#siamese:checked~.photos div:not(.siamese) {
+    filter: grayscale(100%) blur(2px);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-top: 1px solid rgb(77, 75, 75);
+    padding-top: 15px;
+}
+
+footer a {
+    color: rgb(28, 28, 133);
+    text-decoration: none;
+}

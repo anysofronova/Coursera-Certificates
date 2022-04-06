@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.menu__container{
+    padding: 1.5rem 3rem;
+}
+.menu__title{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.menu__list{
+    display: flex;
+}
+.menu__item{
+    background-color: #999999;
+    margin: 0 1rem;
+    border: 3px solid black;
+    width: 33%;
+}
+.menu__name{
+    text-align: center;
+    font-weight: 800;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    padding: 0.2rem 2rem;
+    max-width: 60%;
+    float: right;
+}
+.menu__text{
+    clear: right;
+    padding: 0.5rem;
+}
+
+.menu__first-name{
+    background-color: #D59897;
+}
+
+.menu__second-name{
+    background-color: #C24643;
+    color: white;
+}
+
+.menu__third-name{
+    background-color: #E5D198;
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .menu__list{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .menu__item{
+        min-width: 45%;
+        margin-bottom: 2rem;
+    }
+    .menu__third{
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px){
+    .menu__list{
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu__item{
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+}

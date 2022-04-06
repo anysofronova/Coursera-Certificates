@@ -62,5 +62,5 @@
 
 4. [JavaScript, часть 2: прототипы и асинхронность](https://www.coursera.org/learn/javascript-prototipy?specialization=razrabotka-interfeysov)
 
-[Certificate link](https://coursera.org/share/e50480a68d9094a0fa53bbb283516aef)
+[Certificate link](https://coursera.org/share/61813789f532cf948a73a6bd1e4e83dc)
 ![Certificate](https://coursera-certificate-images.s3.amazonaws.com/RSSFUW6KATUS)
